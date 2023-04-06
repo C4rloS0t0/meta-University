@@ -1,0 +1,20 @@
+[Unit]
+Description=Systemd Service Example
+Before=multi-user.target
+
+[Service]
+Type=oneshot
+
+# Put the path to the binary installed by do_install()
+ExecStart=/usr/bin/serviceappcpp-cpp
+ExecStop=/bin/killall serviceappcpp-cpp
+ExecReload=/bin/killall serviceappcpp-cpp; /usr/bin/serviceappcpp-cpp
+
+# These are optional, you can remove them, or
+# read about systemd properties for more control
+RemainAfterExit=yes
+Restart=on-failure
+RestartSec=60s
+
+[Install]
+WantedBy=multi-user.target
