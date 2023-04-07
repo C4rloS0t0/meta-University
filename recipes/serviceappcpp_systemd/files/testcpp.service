@@ -3,7 +3,7 @@ Description=Systemd Service Example
 Before=multi-user.target
 
 [Service]
-Type=oneshot
+Type=simple
 
 # Put the path to the binary installed by do_install()
 ExecStart=/usr/bin/serviceappcpp-cpp

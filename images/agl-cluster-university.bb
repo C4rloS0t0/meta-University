@@ -5,5 +5,7 @@ require ../../meta-agl-demo/recipes-platform/images/agl-cluster-demo-platform.bb
 DESCRIPTION = "Build Test base on agl-cluster-demo-platform.bb"
 
 # Additional recipes to be added to the build
-IMAGE_INSTALL += "service_app"
-IMAGE_INSTALL += "service_appcpp"
+IMAGE_INSTALL += "serviceapp"
+IMAGE_INSTALL += "serviceappcpp"
+IMAGE_INSTALL += "testservices"
+IMAGE_INSTALL += "testservicescpp"

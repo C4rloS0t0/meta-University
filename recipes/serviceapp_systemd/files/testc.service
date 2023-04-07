@@ -4,6 +4,7 @@ Before=multi-user.target
 
 [Service]
 Type=oneshot
+RemainAfterExit=yes
 
 # Put the path to the binary installed by do_install()
 ExecStart=/usr/bin/serviceapp
